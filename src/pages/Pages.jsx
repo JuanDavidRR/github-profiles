@@ -12,6 +12,7 @@ const Pages = () => {
       <AnimatePresence exitBeforeEnter>
         <Routes Location={location} key={location.pathname}>
           <Route path="/" element={<Popular />} />
+          <Route path="/github-profiles" element={<Popular />} />
           <Route path="/search" element={<Search/>}/>
           <Route path="/user/:name" element={<User/>}/>
         </Routes>

@@ -1,0 +1,554 @@
+:root {
+  --black: #0d1117;
+  --black-darken: #010409;
+  --black-light: rgb(22 27 34);
+  --green-btn: #238636;
+  --green-hover: #279f3f;
+  --border: #393939;
+  --blue: #58a6ff;
+  --text: #8b949e;
+}
+
+* {
+  color: #c9d1d9;
+  font-family: Helvetica, sans-serif;
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: whitesmoke;
+  height: 100vh;
+  background-color: var(--black);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-weight: 200;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--black-light);
+  justify-content: space-between;
+  padding: 10px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+.page-title h1{
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: whitesmoke;
+  font-weight: 600;
+
+}
+
+nav div:first-child svg {
+  font-size: 2rem;
+}
+
+nav div:nth-child(2) {
+  display: flex;
+  gap: 2rem;
+}
+
+.search {
+  width: 70%;
+}
+
+form {
+  text-align: center;
+  padding: 20px 0px 50px;
+}
+
+input {
+  padding: 10px;
+  background-color: var(--black);
+  border: gray 1px solid;
+  border-radius: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page-title{
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.App {
+  background-color: var(--black);
+  height: 100%;
+}
+
+.app {
+  margin: 6rem 10% 2rem;
+  height: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.card-item {
+  width: 180px;
+  background-color: var(--black-light);
+  border: var(--border) solid 1px;
+  border-radius: 10px;
+}
+
+.card-item .card-img {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.card-item img {
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s all ease-in-out;
+}
+
+.card-item h3 {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 10px;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+.card-item h3 svg {
+  font-size: 1rem;
+}
+
+.card-item .card-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 10px;
+}
+
+.card-item .card-details div {
+  width: 50%;
+}
+
+.card-details p {
+  line-height: 0;
+  font-size: 0.7rem;
+}
+
+.card-details svg {
+  font-size: 1.4rem;
+}
+
+.card-item .card-details div:first-child {
+  border-right: white solid 1px;
+}
+
+.card-item section:last-child {
+  margin: 0 auto;
+  text-align: center;
+}
+
+button,
+a.btn {
+  padding: 10px;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #238636;
+  transition: 0.3s;
+  color: white;
+  text-align: center;
+  align-self: center;
+  display: block;
+}
+
+button:hover,
+a.btn:hover {
+  background-color: #279f3f;
+}
+
+button.popular {
+  border-radius: 0px 0px 10px 10px;
+}
+
+button.btn-tab {
+  width: 100px;
+  background-color: transparent;
+  display: inline-block;
+  font-weight: 200;
+  border-radius: 0 !important;
+}
+
+button.btn-tab:hover {
+  background-color: var(--black-light);
+}
+
+button.active {
+  border-bottom: 5px solid var(--blue);
+  border: default;
+}
+
+
+.card-item:hover img {
+  transform: scale(1.05);
+  z-index: 1;
+
+}
+
+.card-item button {
+  width: 100%;
+  border-radius: 0px 0px 10px 10px !important;
+}
+
+.search-card-container {
+  margin: 0 auto;
+}
+
+.search-card-item {
+  min-width: 200px;
+  max-width: 700px;
+  background-color: #0d1117;
+  border: var(--border) solid 1px;
+  border-radius: 10px;
+  margin: 0 auto
+}
+
+.search-card-details div:nth-child(1) {
+  width: 40%;
+}
+
+.search-card-details div:last-child {
+  padding-left: 30px;
+}
+
+.search-card-details {
+  display: flex;
+  padding: 20px;
+}
+
+.search-card-details span {
+  font-size: 1rem;
+}
+
+.search-card-item img {
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s all ease-in-out;
+}
+
+.search-card-details h2 {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.user-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5rem;
+  margin-bottom: 4rem;
+}
+
+.user-container>div:first-child {
+  width: 30%;
+  text-align: center;
+}
+
+.user-container a.btn {
+  width: 150px;
+  color: white;
+  align-self: center;
+  margin: 0px 0 0px;
+  display: block;
+  border-radius: inherit;
+}
+
+.user-container img {
+  width: 100%;
+  border: var(--border) solid 1px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center
+}
+
+.user-container div:first-child a {
+  color: var(--blue);
+  margin: 15px;
+  display: block;
+}
+
+.user-container p:last-child {
+  margin-bottom: 30px;
+}
+
+.user-container h1,
+.user-container h3 {
+  line-height: 15px;
+}
+
+.user-container h3:nth-child(3) {
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.user-details-info {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  gap: 5rem;
+}
+
+.user-details-info h4 svg {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.user-details {
+  width: 60%;
+  border: 1px solid var(--border);
+  padding: 20px 50px 35px;
+}
+
+.user-details a.btn svg {
+  font-size: 20px;
+}
+
+.repo-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.repo-item {
+  align-self: flex-start;
+  width: 42%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 10px 30px;
+}
+
+.repo-item h4,
+.repo-item p,
+.repo-item span {
+  margin: 10px;
+  color: var(--text);
+}
+
+.repo-header,
+.repo-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.repo-header h4 {
+  color: var(--blue);
+}
+
+.repo-body {
+  flex: 1 1;
+}
+
+.repo-footer {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 10px 0;
+}
+
+.repo-footer a.btn {
+  width: 100px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+}
+
+.repo-header span {
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.app-user {
+  margin-top: 5rem;
+  padding: 3rem 10%;
+  background-color: #0d1117;
+}
+
+.app-user p {
+  font-size: 0.8rem;
+}
+
+.app-user svg {
+  font-size: 1rem;
+  vertical-align: sub;
+  padding-left: 5px;
+}
+
+.app-user button {
+  border-radius: 8px;
+}
+
+.user-details-info p:not(.repo-link) {
+  text-align: center;
+}
+
+hr {
+  background-color: var(--border);
+  height: 1px;
+  border: none;
+  margin: 40px 0;
+}
+
+a.repo-link {
+  color: var(--blue) !important;
+  display: block;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width:500px) {
+  nav {
+    position: fixed;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 0;
+  }
+
+  .app {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 20px;
+  }
+
+  .card-container {
+    gap: 2rem 1rem;
+  }
+
+  .card-item {
+    width: 47%;
+    height: 250px;
+  }
+
+  .card-item .card-img {
+    height: 150px;
+    width: 100%;
+  }
+
+  .card-item h3 {
+    margin: 10px 0;
+  }
+
+  .app-user {
+    margin-top: 50px;
+    padding: 30px;
+  }
+
+  .user-container {
+    display: block;
+  }
+
+  .user-container div:first-child {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .user-container img {
+    width: 70%;
+  }
+
+  h4,
+  h3 {
+    text-align: center;
+  }
+
+  .search-card-details {
+    display: block;
+    padding: 0;
+  }
+
+  .search-card-details>div:nth-child(2) {
+    padding: 20px;
+  }
+
+  .search-card-item {
+    margin: 0 10%
+  }
+
+  .user-details {
+    padding: 20px;
+  }
+
+  .repo-item,
+  input.search,
+  .card-img img, .user-details,
+  .user-details div:nth-child(2),
+  .user-container div:nth-child(2) .search-card-details div:nth-child(1) {
+    width: 100%;
+  }
+
+  .user-details-info {
+    display: flex;
+    text-align: center;
+  }
+
+  .user-details-info div:nth-child(1) {
+    width: 70%;
+  }
+
+  .user-details-info div:nth-child(2) {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .user-details-info div:nth-child(3) {
+    display: none;
+  }
+}

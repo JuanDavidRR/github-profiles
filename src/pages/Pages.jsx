@@ -1,4 +1,3 @@
-import Home from "./Home";
 import { Route, Routes, useLocation } from "react-router-dom";
 import User from "./User";
 import Popular from "./Popular";
@@ -15,6 +14,7 @@ const Pages = () => {
           <Route path="/github-profiles" element={<Popular />} />
           <Route path="/search" element={<Search/>}/>
           <Route path="/user/:name" element={<User/>}/>
+          <Route path="*" element={<Popular/>}/>
         </Routes>
         </AnimatePresence>
     );
